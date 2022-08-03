@@ -1,0 +1,32 @@
+{
+  "pins" : [
+    {
+      "identity" : "amwaythemekit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/VincentChew888/AmwayThemeKit.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "4ae29fb312e21693fc6ec716c938d37f5b3fa7fc"
+      }
+    },
+    {
+      "identity" : "commoninteractions",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/VincentChew888/CommonInteractions.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "0e6629317c70f88b73b1db90f1d04e20b14e645f"
+      }
+    },
+    {
+      "identity" : "swiftui-introspect",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/siteline/SwiftUI-Introspect.git",
+      "state" : {
+        "revision" : "f2616860a41f9d9932da412a8978fec79c06fe24",
+        "version" : "0.1.4"
+      }
+    }
+  ],
+  "version" : 2
+}
