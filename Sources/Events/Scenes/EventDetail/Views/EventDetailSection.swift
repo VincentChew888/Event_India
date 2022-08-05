@@ -10,6 +10,7 @@ import SwiftUI
 struct EventDetailSection: View {
     // MARK: - View Dependencies
 
+    let isRegistered: Bool
     let eventsDetailSectionTitle: String
     var eventDetailSection: [EventDetailCell.ViewData]
     let didTapOnContentButton: (EventDetailCell.ActionType?) -> Void
@@ -40,8 +41,12 @@ struct EventDetailSection: View {
 
 private extension EventDetailSection {
     var sectionTitle: some View {
+        if(isRegistered) {
+            Text("Registered")
+        }
         Text(eventsDetailSectionTitle)
             .foregroundColor(Theme.current.amwayBlack.color)
+            .backgroundColor(UIColor.red)
             .fontWithLineHeight(font: Theme.current.subtitle.uiFont,
                                 lineHeight: Theme.current.subtitle.lineHeight,
                                 verticalPadding: 0)

@@ -74,7 +74,8 @@ public struct EventDetailView: View {
                                 EventDetailHeaderView(viewData: viewModel.eventsHeaderViewData,
                                                       shareData: viewModel.eventShareData,
                                                       actionPerformed: actionPerformed)
-                                EventDetailSection(eventsDetailSectionTitle: viewModel.eventDetailSection.eventsDetailSectionTitle,
+                                EventDetailSection(isRegistered: true, //MYCHEWWS todo
+                                    eventsDetailSectionTitle: viewModel.eventDetailSection.eventsDetailSectionTitle,
                                                    eventDetailSection: viewModel.eventDetailSection.eventDetailSections,
                                                    didTapOnContentButton: { type in
                                                        didTapOnContentButtons(type, location: viewModel.calendarEventData.location)
