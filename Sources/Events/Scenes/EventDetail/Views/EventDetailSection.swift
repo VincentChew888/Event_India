@@ -33,7 +33,7 @@ struct EventDetailSection: View {
         }
         .padding([.leading, .trailing], Constants.defaultPadding)
         .padding(.top, 24)
-        .background(isRegistered ? UIColor.red : Theme.current.white.color)
+        .background(isRegistered ? Color.orange : Theme.current.white.color)
         .cornerRadius(Constants.cornerRadius)
     }
 }
