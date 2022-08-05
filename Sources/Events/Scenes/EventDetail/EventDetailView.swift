@@ -64,7 +64,8 @@ public struct EventDetailView: View {
                 }
             case let .success(viewModel):
                 ZStack {
-                    Theme.current.backgroundGray.color
+//                    Theme.current.backgroundGray.color
+                    Color.orange
                     VStack {
                         RefreshableScrollView(showsIndicators: false, loaderOffset: safeAreaInsets.top) { refreshComplete in
                             presenter.fetchEventDetail(type: .refresh,
@@ -132,7 +133,6 @@ public struct EventDetailView: View {
                 .onRefresh { _ in
                     fetchEventDetail()
                 }
-                .background(Color.orange)
                 .overlay(backButton, alignment: .topLeading)
                 VStack {
                     if presenter.showCalendarToast,
