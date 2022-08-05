@@ -14,6 +14,7 @@ struct EventDetailSection: View {
     let eventsDetailSectionTitle: String
     var eventDetailSection: [EventDetailCell.ViewData]
     let didTapOnContentButton: (EventDetailCell.ActionType?) -> Void
+//    let eventBackgroundColor = isRegistered = UIColor.red : Theme.current.white.color
 
     // MARK: - Body
 
@@ -32,11 +33,7 @@ struct EventDetailSection: View {
         }
         .padding([.leading, .trailing], Constants.defaultPadding)
         .padding(.top, 24)
-        if(isRegistered){
-            .background(UIColor.orange)
-        } else {
-            .background(Theme.current.white.color)
-        }
+        .background(isRegistered == .true ? UIColor.red : Theme.current.white.color)
         .cornerRadius(Constants.cornerRadius)
     }
 }
@@ -45,7 +42,7 @@ struct EventDetailSection: View {
 
 private extension EventDetailSection {
     var sectionTitle: some View {
-        if(isRegistered) {
+        if isRegistered {
             Text("Registered")
         }
         Text(eventsDetailSectionTitle)
