@@ -32,9 +32,11 @@ struct EventDetailSection: View {
         }
         .padding([.leading, .trailing], Constants.defaultPadding)
         .padding(.top, 24)
-        .background(
-            if(isRegistered) UIColor.orange
-            else Theme.current.white.color)
+        if(isRegistered){
+            .background(UIColor.orange)
+        } else {
+            .background(Theme.current.white.color)
+        }
         .cornerRadius(Constants.cornerRadius)
     }
 }
