@@ -62,7 +62,7 @@ struct SegmentListView: View {
                     .padding(viewData.contentInsets)
                 }
             }
-        },
+        }
         VStack(alignment: .center) {
             ScrollView(.horizontal, showsIndicators: false) {
                 ScrollViewReader { scrollViewProxy in
