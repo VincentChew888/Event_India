@@ -33,7 +33,7 @@ struct EventDetailSection: View {
         }
         .padding([.leading, .trailing], Constants.defaultPadding)
         .padding(.top, 24)
-        .background(isRegistered ? ColorType(uiColor: UIColor.orange).color : Theme.current.white.color)
+        .background(Theme.current.white.color)
         .cornerRadius(Constants.cornerRadius)
     }
 }
@@ -42,17 +42,12 @@ struct EventDetailSection: View {
 
 private extension EventDetailSection {
     var sectionTitle: some View {
-        VStack {
-            if isRegistered {
-                Text("Registered")
-            }
-            Text(eventsDetailSectionTitle)
-                .foregroundColor(Theme.current.amwayBlack.color)
-                .fontWithLineHeight(font: Theme.current.subtitle.uiFont,
-                                    lineHeight: Theme.current.subtitle.lineHeight,
-                                    verticalPadding: 0)
-                .accessibilityIdentifier(AutomationControl.sectionTitle.accessibilityIdentifier())
-        }
+        Text(eventsDetailSectionTitle)
+            .foregroundColor(Theme.current.amwayBlack.color)
+            .fontWithLineHeight(font: Theme.current.subtitle.uiFont,
+                                lineHeight: Theme.current.subtitle.lineHeight,
+                                verticalPadding: 0)
+            .accessibilityIdentifier(AutomationControl.sectionTitle.accessibilityIdentifier())
     }
 }
 

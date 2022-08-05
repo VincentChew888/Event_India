@@ -132,6 +132,7 @@ public struct EventDetailView: View {
                 .onRefresh { _ in
                     fetchEventDetail()
                 }
+                .background(ColorType(uiColor: UIColor.orange).color.opacity(.5))
                 .overlay(backButton, alignment: .topLeading)
                 VStack {
                     if presenter.showCalendarToast,
