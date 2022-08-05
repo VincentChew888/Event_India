@@ -32,7 +32,9 @@ struct EventDetailSection: View {
         }
         .padding([.leading, .trailing], Constants.defaultPadding)
         .padding(.top, 24)
-        .background(Theme.current.white.color)
+        .background(
+            if(isRegistered) UIColor.orange
+            else Theme.current.white.color)
         .cornerRadius(Constants.cornerRadius)
     }
 }
@@ -46,7 +48,6 @@ private extension EventDetailSection {
         }
         Text(eventsDetailSectionTitle)
             .foregroundColor(Theme.current.amwayBlack.color)
-            .backgroundColor(UIColor.red)
             .fontWithLineHeight(font: Theme.current.subtitle.uiFont,
                                 lineHeight: Theme.current.subtitle.lineHeight,
                                 verticalPadding: 0)
